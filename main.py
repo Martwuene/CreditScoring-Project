@@ -73,6 +73,17 @@ def data_load():
 # Sidebar setup
 st.sidebar.title('Content')
 upload_file = st.sidebar.file_uploader('Upload a file of training set only')
+if upload_file is None:
+    st.markdown("""
+                    # HI, WELCOME!
+
+                   # I AM MACHINE LEARNING AUTO APP
+
+                Please upload the training data set, before we begin.
+
+
+        """)
+    
 # Sidebar navigation
 st.sidebar.title('Navigation')
 options = st.sidebar.selectbox('Select what you want to display', 
