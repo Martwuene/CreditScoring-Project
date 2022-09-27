@@ -62,7 +62,7 @@ def data_load():
     # Maximize column width to display all information on the DataFrame.
     pd.set_option('max_colwidth', None)
     # Print the data dictionary
-    dictionary = pd.read_excel('data/Data Dictionary.xls', header=1)
+    dictionary = pd.read_excel('data/Data Dictionary.xls', engine='openpyxl', header=1)
     st.write(dictionary)
     st.write('')
     st.write('')
